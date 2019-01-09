@@ -5,6 +5,9 @@
 <title>Merch</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+	<link href="css/cart.css" rel="stylesheet" type="text/css">
+	<script src="js/main.js"></script>
+	<script src="js/merch.js" async></script>
 </head>
 
 <body>
@@ -27,7 +30,191 @@
 	<label for="nav-toggle" class="nav-toggle-label">
 	<span></span>
 	</label>
-	
 </header>
+	
+	<br><br><br><br>
+	
+	
+		<div class="banner-container"> <!-- Banner image + text -->
+	    <img src="assets/group_background.jpg" alt="Snow Patrol Band Memebers" class="banner">
+		<p class="banner-title">Merch Shop</p>
+		<p class="banner-description"></p>
+	</div>
+	
+	<main>
+	
+	
+		
+	<div class="table-menu-merch"> <!-- Buttons to select which category of items to display -->
+	
+			
+			<button onclick="showAll()">All</button>
+		<button onclick="showClothing()">Clothing</button>
+			<button onclick="showAccessories()">Accessories</button>
+			<button onclick="showMusic()">Music</button>
+	
+		<!-- Tables to hold merch elements -->
+	<div class="table-all-merch">
+		<div class="table-merch-items">
+			
+		<!-- Clothing merch elements -->
+	<div class="all-product-items">		
+	<table id="clothing">
+	<tbody>
+		<tr>
+			<td>
+				<!-- Item 1 -->
+				<div class="item-holder">
+				<img class="merch-item-img" src="assets/merch/logo-bobble-beanie.jpg" alt="Snow Patrol Bobble Hat">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Bobble Hat</p>
+				<div class="merch-price-box"> <p>£25</p> </div>
+				 </div>
+					</div>
+						 
+					 
+					
+			
+			</td>
+			<td>
+				<!-- Item 2 -->
+			<div class="item-holder">
+				<img class="merch-item-img" src="assets/merch/logo-scarf.jpg" alt="Snow Patrol Scarf">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Scarf</p>
+				<div class="merch-price-box"> <p>£15</p> </div>
+				 </div>
+				</div>
+					
+
+			
+			</td>
+		
+		</tr>
+		<tr>
+			<td>
+			<div class="item-holder">
+			<!-- Item 3 -->
+				<img class="merch-item-img" src="assets/merch/logo-zip-hood.jpg" alt="Snow Patrol Navy Zip Hood">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Navy Zip Hood</p>
+				<div class="merch-price-box"> <p>£60</p> </div>
+				 </div>
+				</div>
+			</td>
+			<td>
+			<div class="item-holder">
+			<!-- Item 4 -->
+				<img class="merch-item-img" src="assets/merch/logo-men-black-tshirt.jpg" alt="Snow Men’s Black Tee">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Men’s Black Tee</p>
+				<div class="merch-price-box"> <p>£28</p> </div>
+				 </div>
+				</div>
+			</td>
+			
+		</tr>
+		</tbody>
+		</table>
+			
+			
+			<!-- Accessories merch elements -->
+		<table id="accessories">
+			<tbody>
+		<tr>
+			<td>
+			<div class="item-holder">
+			<!-- Item 5 -->
+				<img class="merch-item-img" src="assets/merch/wildness-keyring.jpg" alt="Snow Patrol Keyring">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Keyring</p>
+				<div class="merch-price-box"> <p>£8</p></div>
+				 </div>
+				</div>
+			</td>
+			<td>
+			<div class="item-holder">
+			<!-- Item 6 -->
+				<img class="merch-item-img" src="assets/merch/eagle-mug.jpg" alt="Snow Patrol Mug">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Mug </p>
+				<div class="merch-price-box"> <p>£9</p> </div>
+				 </div>
+				</div>
+			</td>
+			
+		</tr>
+			</tbody>
+		</table>
+			
+		<table id="music">
+			<tbody>
+		<tr>
+			<td>
+				<div class="item-holder">
+			<!-- Item 7 -->
+				<img class="merch-item-img" src="assets/merch/SnowPatrol-EyesOpen.jpg" alt="Snow Patrol Eyes Open Album">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Eyes Open Album</p>
+				<div class="merch-price-box"> <p>£20.99</p> </div>
+				 </div>
+				</div>
+			</td>
+			<td>
+			<div class="item-holder">
+			<!-- Item 8 -->
+				<img class="merch-item-img" src="assets/merch/SnowPatrol-Wildness.jpg" alt="Snow Patrol Eyes Wildness Album">
+				
+			<div class="merch-item-price-box">
+				<p class="merch-item-title"> Wildness Album</p>
+				<div class="merch-price-box"> <p>£24.99</p> </div>
+				 </div>
+				</div>
+			</td>
+			
+		</tr>
+	</tbody>
+</table>
+
+		</div>
+		</div> 
+		</div>
+		</div>
+	
+		
+		<div class="shopping-cart-view">
+            <p class="section-header">CART</p>
+		
+		
+			<div class="cart-items">
+            
+			</div>
+		
+		
+		
+		
+		<div class="cart-total">
+	<div class="cart-total-title">Total</div>
+		<span class="cart-total-price">£0</span>
+		</div>
+		
+		<button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+	</div>
+			
+			
+	</main>
+
+	
+	
+	
+	
+	
 </body>
 </html>
