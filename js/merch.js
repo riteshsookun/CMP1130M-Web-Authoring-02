@@ -51,17 +51,17 @@ function addToCartClicked(event){
 	var merchItem = button.parentElement.parentElement;
 	var itemTitle = merchItem.getElementsByClassName("merch-item-title")[0].innerText;
 	var itemPrice = merchItem.getElementsByClassName("merch-price-box")[0].innerText;
-	var itemImgSrc = merchItem.getElementsByClassName("merch-item-img")[0].src;
-	addItemToCart(itemTitle, itemPrice, itemImgSrc);
+	//var itemImgSrc = merchItem.getElementsByClassName("merch-item-img")[0].src;
+	addItemToCart(itemTitle, itemPrice);
 	updateCartTotal();
 }
 
-function addItemToCart(itemTitle, itemPrice, itemImgSrc){
+function addItemToCart(itemTitle, itemPrice,){
 	var cartRow = document.createElement('div');
 	
 	var cartItems = document.getElementsByClassName("cart-items")[0];
 	cartRow.classList.add("cart-row");
-	var allCartItems = cartItems.getElementsByClassName("cart-item-title")
+	var allCartItems = cartItems.getElementsByClassName("cart-item-title");
 		for (var i = 0; i<allCartItems.length; i++){
 			if (allCartItems[i].innerText == itemTitle){
 				alert("This item already in your cart. Please use the quantity selectors if you wish to purchase more than one");
@@ -71,7 +71,7 @@ function addItemToCart(itemTitle, itemPrice, itemImgSrc){
 	var NewCartRow = `
 	
 				<div class="cart-item cart-column">
-				<img class="cart-item-image" src="${itemImgSrc}">
+				<img class="cart-item-image" src="assets/logo.jpg">
 					<span class="cart-item-title"> ${itemTitle}</span>
 				</div>
 				<span class="cart-price cart-column"> ${itemPrice} </span>
